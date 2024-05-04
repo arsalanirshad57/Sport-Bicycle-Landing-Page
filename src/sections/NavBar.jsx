@@ -5,8 +5,8 @@ import Navigation from '../components/Navigation'
 const NavBar = () => {
   const navigationList = ['Home', 'Services', 'About', 'Contact']
   return (
-    <div className=" relative bg-black w-full z-50 ">
-      <div className=' absolute w-full  flex justify-between items-center py-3 '>
+    <div className=" relative bg-black w-full z-50 px-10 ">
+      <div className='w-full absolute flex justify-between items-center py-4 pr-20 '>
         <Logo />
         <Navigation data={navigationList} />
       </div>

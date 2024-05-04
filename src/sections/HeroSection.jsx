@@ -1,15 +1,18 @@
-import React from 'react'
+import React from 'react';
+import HeroImage from '../components/HeroImage';
+import HeroLeft from '../components/HeroLeft';
 
 const HeroSection = () => {
   return (
-    <div className=' '>
-      <div className="flex justify-between ">
-        {/* LEFT  */}
-
-        {/* RIGHT  */}
+    <div className="pl-10 bg-hero-bg h-screen bg-contain bg-no-repeat  xl:bg-none  bg-right ">
+        <div className="flex justify-between ">
+          {/* LEFT */}
+          <HeroLeft />
+          {/* RIGHT */}
+          <HeroImage />
+        </div>
       </div>
-    </div>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

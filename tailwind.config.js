@@ -15,6 +15,9 @@ module.exports = {
       fontWeight:{
         '450':'450',
         '550':'550',
+      },
+      backgroundImage: {
+        'hero-bg': "url('/src/images/bg_2.png')",
       }
     },
   },

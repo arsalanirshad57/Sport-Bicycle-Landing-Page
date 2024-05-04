@@ -4,7 +4,7 @@ import HeroLeft from '../components/HeroLeft';
 
 const HeroSection = () => {
   return (
-    <div className="pl-10 bg-hero-bg h-screen bg-contain bg-no-repeat  xl:bg-none  bg-right ">
+    <div className="  pl-5 md:pl-10 bg-hero-bg h-screen bg-conver bg-no-repeat xl:bg-none  bg-center bg-clip-padding bg-fixed ">
         <div className="flex justify-between ">
           {/* LEFT */}
           <HeroLeft />

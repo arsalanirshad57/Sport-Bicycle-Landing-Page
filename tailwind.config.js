@@ -11,6 +11,8 @@ module.exports = {
       },
       fontSize: {
      'font-15':"15px",
+     'font-22':"22px",
+     'font-17':"17px",
       },
       fontWeight:{
         '450':'450',

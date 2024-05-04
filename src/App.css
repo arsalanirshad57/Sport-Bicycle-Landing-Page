@@ -7,3 +7,6 @@
 body{
     font-family: "Jost", sans-serif;
 }
+.active{
+    border: 2px solid red;
+}

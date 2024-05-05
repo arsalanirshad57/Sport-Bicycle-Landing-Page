@@ -1,12 +1,13 @@
 import React , {useState} from 'react'
 import { Icon } from '@iconify/react'
 import Span from './Span'
+
 const ResponsiveNavigation = ({data}) => {
     const [openNav, setOpenNav] = useState(false)
 
     return (
         <div className={` ${openNav ? 'fixed top-0 left-0 w-full  bg-black h-screen ' :' '}  md:hidden  `}>
-            <div className=" cursor-pointer absolute right-7 top-7  " onClick={() => setOpenNav(!openNav)}>
+            <div className=" cursor-pointer absolute right-8  top-7  " onClick={() => setOpenNav(!openNav)}>
                 {openNav ? <Icon icon={'akar-icons:cross'} className='w-7 h-7 text-neutral cursor-pointer ' /> : <Icon icon={'heroicons-outline:menu-alt-4'} className='w-8 h-8 text-neutral cursor-pointer' />}
             </div>
             {openNav && (<div className="flex flex-col justify-center h-screen gap-10 items-center">

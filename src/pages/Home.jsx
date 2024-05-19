@@ -6,7 +6,7 @@ import NavBar from '../sections/NavBar'
 
 const Home = () => {
     return (
-        <div className="">
+        <div className="relative">
             <NavBar/>
             <HeroSection/>
             <ProductSection/>

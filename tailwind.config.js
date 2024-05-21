@@ -8,6 +8,9 @@ module.exports = {
       width: {
         '29pr': '29%'
       },
+      maxWidth: {
+        '700px': '700px'
+      },
       height: {
         '700': '700px'
       },
@@ -29,7 +32,11 @@ module.exports = {
       },
       backgroundImage: {
         'hero-bg': "url('/src/images/bg_2.png')",
+      },
+      rotate: {
+        '70min': '-70deg',
       }
+
     },
   },
   plugins: [],

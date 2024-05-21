@@ -1,15 +1,15 @@
 import React from 'react';
-import HeroImage from '../components/HeroImage';
+import HeroRight from '../components/HeroRight';
 import HeroLeft from '../components/HeroLeft';
 
 const HeroSection = () => {
   return (
-    <div className="  pl-5 md:pl-10 bg-hero-bg h-screen bg-conver bg-no-repeat xl:bg-none  bg-center bg-clip-padding">
+    <div className=" pl-5 md:pl-10 bg-hero-bg h-screen bg-cover md:bg-contain bg-center md:bg-right  bg-no-repeat xl:bg-none bg-clip-padding">
         <div className="flex justify-between ">
           {/* LEFT */}
           <HeroLeft />
           {/* RIGHT */}
-          <HeroImage />
+          <HeroRight />
         </div>
       </div>
   );

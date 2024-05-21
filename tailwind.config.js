@@ -25,6 +25,7 @@ module.exports = {
         'font-15': "15px",
         'font-22': "22px",
         'font-17': "17px",
+        '13px':'13px'
       },
       fontWeight: {
         '450': '450',
@@ -35,8 +36,10 @@ module.exports = {
       },
       rotate: {
         '70min': '-70deg',
+      },
+      borderWidth:{
+        '2px':'2.5px'
       }
-
     },
   },
   plugins: [],

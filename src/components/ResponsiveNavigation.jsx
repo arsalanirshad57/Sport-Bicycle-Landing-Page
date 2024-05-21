@@ -8,7 +8,7 @@ const ResponsiveNavigation = ({ data }) => {
     return (
         <>
             <div className=" md:hidden ">
-                <div className="cursor-pointer absolute right-8 top-8 z-50 " onClick={() => setOpenNav(!openNav)}>
+                <div className="cursor-pointer absolute right-4 sm:right-8 top-6 z-50 " onClick={() => setOpenNav(!openNav)}>
                     {openNav ? (
                         <Icon icon={'akar-icons:cross'} className="w-7 h-7 text-neutral cursor-pointer" />
                     ) : (

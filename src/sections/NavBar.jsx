@@ -6,7 +6,7 @@ import ResponsiveNavigation from '../components/ResponsiveNavigation'
 const NavBar = () => {
   const navigationList = ['Home', 'Services', 'About', 'Contact']
   return (
-      <div className='w-full absolute flex justify-between items-center px-6 md:px-10 py-4 pr-12 md:pr-16 '>
+      <div className='w-full absolute flex justify-between items-center px-4 md:px-10 py-4 pr-12 md:pr-16 z-50 '>
         <Logo />
         <Navigation data={navigationList} />
         <ResponsiveNavigation data={navigationList} />

@@ -3,7 +3,7 @@ import ProductImage from '../components/ProductImage'
 import ProductCardsSection from '../components/ProductCardsSection'
 const ProductSection = () => {
     return (
-        <div className="flex justify-between ">
+        <div className="flex gap-2 ">
             <ProductImage />
             <ProductCardsSection/>
         </div>

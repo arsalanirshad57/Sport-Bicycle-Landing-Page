@@ -1,27 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Badge from './Badge'
-
+import Heading3 from './Heading3'
+import Span from './Span'
+import AddToCard from './AddToCard'
+import Img from '../images/products/pro_1.png'
 const ProductCard = ({ data }) => {
-  console.log(data)
+  const [productImag, setProductImage] = useState()
+  const [active, SetActive] = useState(0)
+  const handleBadgeToggle = (index) => {
+    SetActive((prevIndex) => prevIndex === index ? null : index)
+  }
+  
   return (
-    <div className='border rounded-2xl col-span-1 bg-[rgb(42, 42, 44)] p-3 '>
+    <div className=' flex flex-col gap-3 border rounded-2xl col-span-2 sm:col-span-1 bg-[rgb(42, 42, 44)] pt-3 px-3 pb-3 '>
       {/* colors  */}
       <div className="flex justify-end gap-1.5 ">
-        {data.colors.map((color) => {
-          console.log(color , 'color');
+        {data.colors.map((color, index) => {
           return (
-            <Badge className={`border bg-green `} />
-          )
-        })}
-      </div>
-      <div className="flex justify-center gap-1.5 ">
-        {data.images.map((image) => {
-          return (
-            <img src={image} alt="" className="" />
+            <span className={`w-[18px] h-[18px] rounded-full cursor-pointer  ${active === index ? ' border-2px' : ''}  ${index === 0 ?'border':''} `} onClick={() => handleBadgeToggle(index)} style={{ backgroundColor: color }}></span>
           )
         })}
       </div>
       {/* images  */}
+      <div className="flex justify-center gap-1.5 border rounded-md h-44 ">
+            <img src={''} alt='img' className=" w-64 mb-2 " />
+      </div>
+      <div className='flex flex-col gap-2'>
+        <Heading3>{data.name}</Heading3>
+        <Span className={'text-white !text-base -mt-1.5'}>{data.price}</Span>
+        <AddToCard />
+      </div>
     </div>
   )
 }

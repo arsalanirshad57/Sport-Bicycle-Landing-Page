@@ -3,18 +3,17 @@
   import Heading3 from './Heading3'
   import Span from './Span'
   import AddToCard from './AddToCard'
- 
-  
+
   const ProductCard = ({ data }) => {
     // States 
-    const [productImag, setProductImage] = useState(data.images[0])
+    const [productImag, setProductImage] = useState([data.images[0]])
     const [active, SetActive] = useState('black')
 
   // Image toogler 
     const handleBadgeToggle = (label) => {
       SetActive((prevLabel) => prevLabel === label ? label : label)
       data.images.filter((imgPro) => {
-        return imgPro.label == label ? setProductImage(imgPro) : null
+        return imgPro.label == label ? setProductImage([imgPro]) : []
       })
     }
 
@@ -30,13 +29,13 @@
         </div>
         {/* images  */}
         <div className="flex justify-center gap-1.5 rounded-md h-44 my-1 sm:my-0">
-          {/* {
+          {
             productImag?.map((img) => {
-              return ( */}
-                <img src={productImag.path} key={productImag.label} alt={productImag.label} className={` w-64 ${productImag.label == 'grey'? 'mt-2 ': ''}`} />
-              {/* )
+              return (
+                <img src={img.path} key={img.label} alt={img.label} className={` w-64 ${img.label == 'grey'? 'mt-2 ': ''}`} />
+              )
             })
-          }  */}
+          } 
         </div>
         <div className='flex flex-col gap-2'>
           <Heading3>{data.name}</Heading3>

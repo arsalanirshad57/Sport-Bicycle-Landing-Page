@@ -2,6 +2,10 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import Heading2 from './Heading2'
 import Span from './Span'
+import Pro_4 from '../images/products/pro_4.png'
+import Pro_3 from '../images/products/pro_3.png'
+import Pro_2 from '../images/products/pro_2.png'
+import Pro_1 from '../images/products/pro_1.png'
 
 const ProductCardsSection = () => {
     const ProductData = [
@@ -13,10 +17,10 @@ const ProductCardsSection = () => {
                 { label: 'green', hex: '#AEB1A4' }
             ],
             images: [
-                { label: 'black', path: '/static/media/pro_3.c59c04f6c2bfdc9e5ac2.png' },
-                { label: 'grey', path: '/static/media/pro_2.79a9c9d27e38df87b4ef.png'},
-                { label: 'brown', path: '/static/media/pro_4.dcb35c5a588721934014.png'},
-                { label: 'green', path: '/static/media/pro_1.246e55fd521bd1c54166.png'},
+                { label: 'black', path: Pro_3 },
+                { label: 'grey', path: Pro_2},
+                { label: 'brown', path: Pro_4},
+                { label: 'green', path: Pro_1},
             ],
             name: 'QWIC Premium I MN7',
             price: '$10,0000',
@@ -29,10 +33,10 @@ const ProductCardsSection = () => {
                 { label: 'green', hex: '#AEB1A4' }
             ],
             images: [
-                { label: 'black', path: '/static/media/pro_3.c59c04f6c2bfdc9e5ac2.png' },
-                { label: 'grey', path: '/static/media/pro_2.79a9c9d27e38df87b4ef.png' },
-                { label: 'brown', path: '/static/media/pro_4.dcb35c5a588721934014.png' },
-                { label: 'green', path: '/static/media/pro_1.246e55fd521bd1c54166.png' },
+                { label: 'black', path: Pro_3 },
+                { label: 'grey', path: Pro_2},
+                { label: 'brown', path: Pro_4},
+                { label: 'green', path: Pro_1},
             ],
             name: 'QWIC Premium I MN7',
             price: '$10,0000',
@@ -45,10 +49,10 @@ const ProductCardsSection = () => {
                 { label: 'green', hex: '#AEB1A4' }
             ],
             images: [
-                { label: 'black', path: '/static/media/pro_3.c59c04f6c2bfdc9e5ac2.png' },
-                { label: 'grey', path: '/static/media/pro_2.79a9c9d27e38df87b4ef.png' },
-                { label: 'brown', path: '/static/media/pro_4.dcb35c5a588721934014.png' },
-                { label: 'green', path: '/static/media/pro_1.246e55fd521bd1c54166.png' },
+                { label: 'black', path: Pro_3 },
+                { label: 'grey', path: Pro_2},
+                { label: 'brown', path: Pro_4},
+                { label: 'green', path: Pro_1},
             ],
             name: 'QWIC Premium I MN7',
             price: '$10,0000',
@@ -61,10 +65,10 @@ const ProductCardsSection = () => {
                 { label: 'green', hex: '#AEB1A4' }
             ],
             images: [
-                { label: 'black', path: '/static/media/pro_3.c59c04f6c2bfdc9e5ac2.png' },
-                { label: 'grey', path: '/static/media/pro_2.79a9c9d27e38df87b4ef.png' },
-                { label: 'brown', path: '/static/media/pro_4.dcb35c5a588721934014.png' },
-                { label: 'green', path: '/static/media/pro_1.246e55fd521bd1c54166.png' },
+                { label: 'black', path: Pro_3 },
+                { label: 'grey', path: Pro_2},
+                { label: 'brown', path: Pro_4},
+                { label: 'green', path: Pro_1},
             ],
             name: 'QWIC Premium I MN7',
             price: '$10,0000',
@@ -77,10 +81,10 @@ const ProductCardsSection = () => {
                 { label: 'green', hex: '#AEB1A4' }
             ],
             images: [
-                { label: 'black', path: '/static/media/pro_3.c59c04f6c2bfdc9e5ac2.png' },
-                { label: 'grey', path: '/static/media/pro_2.79a9c9d27e38df87b4ef.png' },
-                { label: 'brown', path: '/static/media/pro_4.dcb35c5a588721934014.png' },
-                { label: 'green', path: '/static/media/pro_1.246e55fd521bd1c54166.png' },
+                { label: 'black', path: Pro_3 },
+                { label: 'grey', path: Pro_2},
+                { label: 'brown', path: Pro_4},
+                { label: 'green', path: Pro_1},
             ],
             name: 'QWIC Premium I MN7',
             price: '$10,0000',
@@ -93,18 +97,19 @@ const ProductCardsSection = () => {
                 { label: 'green', hex: '#AEB1A4' }
             ],
             images: [
-                { label: 'black', path: '/static/media/pro_3.c59c04f6c2bfdc9e5ac2.png' },
-                { label: 'grey', path: '/static/media/pro_2.79a9c9d27e38df87b4ef.png' },
-                { label: 'brown', path: '/static/media/pro_4.dcb35c5a588721934014.png' },
-                { label: 'green', path: '/static/media/pro_1.246e55fd521bd1c54166.png' },
+                { label: 'black', path: Pro_3 },
+                { label: 'grey', path: Pro_2},
+                { label: 'brown', path: Pro_4},
+                { label: 'green', path: Pro_1},
             ],
             name: 'QWIC Premium I MN7',
             price: '$10,0000',
         },
+       
     ]
     return (
         <div className="w-full px-4 sm:px-8  xl:pl-0 xl:pr-12">
-            <div className="xl:hidden flex flex-col justify-center items-center py-8 ">
+            <div className="xl:hidden flex flex-col justify-center items-center py-8">
                 <Heading2 className={'uppercase !text-[34px] sm:!text-5xl  lg:!text-6xl'}>Sport Bicylce</Heading2>
                 <Span className='uppercase !text-base sm:!text-xl '>Latest Products</Span>
             </div>

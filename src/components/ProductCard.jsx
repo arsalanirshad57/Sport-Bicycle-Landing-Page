@@ -3,7 +3,11 @@
   import Heading3 from './Heading3'
   import Span from './Span'
   import AddToCard from './AddToCard'
-
+  import Pro_3 from '../images/products/pro_3.png'
+  import Pro_4 from '../images/products/pro_4.png'
+  import Pro_2 from '../images/products/pro_2.png'
+  import Pro_1 from '../images/products/pro_1.png'
+  
   const ProductCard = ({ data }) => {
     // States 
     const [productImag, setProductImage] = useState([data.images[0]])

@@ -7,14 +7,16 @@ module.exports = {
     extend: {
       width: {
         '29pr': '29%',
-        '18px':'18px'
+        '18px':'18px',
+        '22px':'22px',
       },
       maxWidth: {
         '700px': '700px'
       },
       height: {
         '700': '700px',
-        '18px':'18px'
+        '18px':'18px',
+        '22px':'22px',
       },
       colors: {
         'neutral': '#A2A199',

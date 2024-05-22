@@ -23,12 +23,12 @@
         <div className="flex justify-end gap-1.5 ">
           {data.colors.map((color, index) => {
             return (
-              <Badge className={`  ${ active === color.label ? ' border-2px' : ''}  ${index === 0 ? 'border' : ''} `} onClick={() => handleBadgeToggle(color.label, index)} style={{ backgroundColor: color.hex }}/>
+              <Badge className={` mx-1.5 sm:mx-0  ${ active === color.label ? ' border-2px' : ''}  ${index === 0 ? 'border' : ''} `} onClick={() => handleBadgeToggle(color.label, index)} style={{ backgroundColor: color.hex }}/>
             )
           })}
         </div>
         {/* images  */}
-        <div className="flex justify-center gap-1.5 rounded-md h-44 ">
+        <div className="flex justify-center gap-1.5 rounded-md h-44 my-1 sm:my-0">
           {
             productImag?.map((img) => {
               return (
@@ -39,7 +39,7 @@
         </div>
         <div className='flex flex-col gap-2'>
           <Heading3>{data.name}</Heading3>
-          <Span className={'text-white !text-base -mt-1.5'}>{data.price}</Span>
+          <Span className={'text-white !text-base sm:-mt-1.5'}>{data.price}</Span>
           <AddToCard />
         </div>
       </div>

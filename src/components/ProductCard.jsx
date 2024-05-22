@@ -1,37 +1,49 @@
-import React, { useState } from 'react'
-import Badge from './Badge'
-import Heading3 from './Heading3'
-import Span from './Span'
-import AddToCard from './AddToCard'
-import Img from '../images/products/pro_1.png'
-const ProductCard = ({ data }) => {
-  const [productImag, setProductImage] = useState()
-  const [active, SetActive] = useState(0)
-  const handleBadgeToggle = (index) => {
-    SetActive((prevIndex) => prevIndex === index ? null : index)
-  }
-  
-  return (
-    <div className=' flex flex-col gap-3 border rounded-2xl col-span-2 sm:col-span-1 bg-[rgb(42, 42, 44)] pt-3 px-3 pb-3 '>
-      {/* colors  */}
-      <div className="flex justify-end gap-1.5 ">
-        {data.colors.map((color, index) => {
-          return (
-            <span className={`w-[18px] h-[18px] rounded-full cursor-pointer  ${active === index ? ' border-2px' : ''}  ${index === 0 ?'border':''} `} onClick={() => handleBadgeToggle(index)} style={{ backgroundColor: color }}></span>
-          )
-        })}
-      </div>
-      {/* images  */}
-      <div className="flex justify-center gap-1.5 border rounded-md h-44 ">
-            <img src={''} alt='img' className=" w-64 mb-2 " />
-      </div>
-      <div className='flex flex-col gap-2'>
-        <Heading3>{data.name}</Heading3>
-        <Span className={'text-white !text-base -mt-1.5'}>{data.price}</Span>
-        <AddToCard />
-      </div>
-    </div>
-  )
-}
+  import React, { useState } from 'react'
+  import Badge from './Badge'
+  import Heading3 from './Heading3'
+  import Span from './Span'
+  import AddToCard from './AddToCard'
 
-export default ProductCard
+  const ProductCard = ({ data }) => {
+    // States 
+    const [productImag, setProductImage] = useState([data.images[0]])
+    const [active, SetActive] = useState('black')
+
+  // Image toogler 
+    const handleBadgeToggle = (label) => {
+      SetActive((prevLabel) => prevLabel === label ? label : label)
+      data.images.filter((imgPro) => {
+        return imgPro.label == label ? setProductImage([imgPro]) : []
+      })
+    }
+
+    return (
+      <div className=' flex flex-col gap-3 rounded-2xl col-span-2 sm:col-span-1 bg-rgbBlack pt-3 px-3 pb-4 '>
+        {/* colors  */}
+        <div className="flex justify-end gap-1.5 ">
+          {data.colors.map((color, index) => {
+            return (
+              <Badge className={`  ${ active === color.label ? ' border-2px' : ''}  ${index === 0 ? 'border' : ''} `} onClick={() => handleBadgeToggle(color.label, index)} style={{ backgroundColor: color.hex }}/>
+            )
+          })}
+        </div>
+        {/* images  */}
+        <div className="flex justify-center gap-1.5 rounded-md h-44 ">
+          {
+            productImag?.map((img) => {
+              return (
+                <img src={img.path} key={img.label} alt={img.label} className={` w-64 ${img.label == 'grey'? 'mt-2 ': ''}`} />
+              )
+            })
+          } 
+        </div>
+        <div className='flex flex-col gap-2'>
+          <Heading3>{data.name}</Heading3>
+          <Span className={'text-white !text-base -mt-1.5'}>{data.price}</Span>
+          <AddToCard />
+        </div>
+      </div>
+    )
+  }
+
+  export default ProductCard

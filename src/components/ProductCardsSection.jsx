@@ -113,7 +113,7 @@ const ProductCardsSection = () => {
                 <Heading2 className={'uppercase !text-[34px] sm:!text-5xl  lg:!text-6xl'}>Sport Bicylce</Heading2>
                 <Span className='uppercase !text-base sm:!text-xl '>Latest Products</Span>
             </div>
-            <div className='w-full grid grid-rows-2 grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 col-span-1 gap-6 sm:gap-4   xl:px-0 pt-2 pb-2'>
+            <div className='w-full grid grid-rows-2 grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 col-span-1 gap-6 sm:gap-4 xl:px-0 pt-2 pb-2 '>
                 {
                     ProductData.map((data, index) => (
                         <ProductCard key={index} data={data} />

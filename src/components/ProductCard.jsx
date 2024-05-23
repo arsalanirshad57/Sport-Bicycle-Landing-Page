@@ -23,7 +23,7 @@
         <div className="flex justify-end gap-1.5 ">
           {data.colors.map((color, index) => {
             return (
-              <Badge className={` mx-1.5 sm:mx-0  ${ active === color.label ? ' border-2px' : ''}  ${index === 0 ? 'border' : ''} `} onClick={() => handleBadgeToggle(color.label, index)} style={{ backgroundColor: color.hex }}/>
+              <Badge className={` mx-3 sm:mx-0  ${ active === color.label ? ' border-2px' : ''}  ${index === 0 ? 'border' : ''} `} onClick={() => handleBadgeToggle(color.label, index)} style={{ backgroundColor: color.hex }}/>
             )
           })}
         </div>
